@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.About {
+  border: 1px solid blue;
+  display:flex;
+  flex-direction: column;
+  height: 45vh;
+
+}
+
+.Projects {
+  border: 1px solid red;
+  height: 30vh;
+}
+
+.Footer {
+  border: 1px solid green;
+  height: 25vh;
+}
