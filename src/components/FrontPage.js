@@ -1,25 +1,41 @@
 import React from "react";
-import yannick from ".././Yannick.jpg"
+import yannick from ".././profile.jpg";
+import "./FrontPage.css";
 
 const FrontPage = () => {
-    return(
-        <div className="image-and-p-container">
-            <div className="nav">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Work</a></li>
-                    <li><a href="">About</a></li>
-                </ul>
-            </div>
-            <img src={yannick} alt="Yannick" width="15%" />
-            <blockquote>
-            <h1 id="front-h1">Hello!</h1>
-            </blockquote>
-            <blockquote>
-            <p id="front-p">My name is Yannick Wessidjam.<br /> I am full stack web developer working<br /> primarily in JavaScript, Python, HTML <br />CSS, Node.js, Redis, React, Flask<br /> FlaskAdmin, curently learning more Go, AWS.</p>
-            </blockquote>
+  return (
+    <>
+      <nav className="nav">
+        <span className="nav-logo">YW</span>
+        <ul className="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+
+      <section id="home" className="hero">
+        <div className="hero-content">
+          <span className="available-badge">● Available for new opportunities</span>
+          <h1 className="hero-title">Hello!</h1>
+          <p className="hero-bio">
+            I'm an engineer at the intersection of code and customer outcomes. With a background bridging sales, support, and full-stack engineering, I write SQL, ship React interfaces, and design the workflows that hold products together. Based in Brooklyn. Looking for my next build.
+          </p>
+          <div className="hero-stats">
+            <span className="stat-badge">⚡ Full-Stack</span>
+            <span className="stat-badge">📍 NYC</span>
+          </div>
+          <div className="hero-ctas">
+            <a href="#work" className="btn btn-primary">View Portfolio</a>
+            <a href="#contact" className="btn btn-secondary">Let's Talk</a>
+          </div>
         </div>
-    )
-}
+        <div className="hero-image-wrap">
+          <img src={yannick} alt="Yannick" className="hero-img" />
+        </div>
+      </section>
+    </>
+  );
+};
 
 export default FrontPage;
